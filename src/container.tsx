@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useRef, memo, UIEvent } from 'react';
+import React, { useEffect, useCallback, useRef, memo, UIEvent } from 'react';
 import raf from 'raf';
 import es from './EventServer';
 import { SubHandler } from './types';

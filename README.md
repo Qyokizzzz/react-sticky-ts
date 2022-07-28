@@ -22,7 +22,7 @@ Today, we usually use functional components with react hooks to build applicatio
 
 Basic example with interfaces:
 
-```jsx
+```tsx
 import React, { CSSProperties } from 'react';
 import { StickyContainer, Sticky } from 'react-sticky-ts';
 
@@ -61,7 +61,7 @@ function App() {
 
 Using react-sticky-ts in antd:
 
-```jsx
+```tsx
 import React from 'react';
 import { Tabs } from 'antd';
 import type { TabsProps } from 'antd';

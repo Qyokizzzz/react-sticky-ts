@@ -18,14 +18,9 @@ In react strict mode, the browser console will send a warning message because of
 
 Today, we usually use functional components with react hooks to build applications, and we prefer to use strict mode and TypeScript. So I used the popular technology to refactor the react-sticky.
 
-## examples
+## Sticky Component interfaces
 
-Basic example with interfaces:
-
-```tsx
-import React, { CSSProperties } from 'react';
-import { StickyContainer, Sticky } from 'react-sticky-ts';
-
+```TypeScript
 interface StickyProps {
   topOffset?: number;
   bottomOffset?: number;
@@ -43,6 +38,15 @@ interface StickyState {
   calculatedHeight: number;
   style: CSSProperties;
 }
+```
+
+## examples
+
+Basic example with interfaces:
+
+```jsx
+import React, { CSSProperties } from 'react';
+import { StickyContainer, Sticky } from 'react-sticky-ts';
 
 function App() {
   return (
@@ -61,7 +65,7 @@ function App() {
 
 Using react-sticky-ts in antd:
 
-```tsx
+```jsx
 import React from 'react';
 import { Tabs } from 'antd';
 import type { TabsProps } from 'antd';

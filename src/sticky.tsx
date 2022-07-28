@@ -38,31 +38,27 @@ function Sticky(props: StickyProps) {
 
   const handleContainerEvent: SubHandler = useCallback(
     (distanceFromTop, distanceFromBottom, eventSource) => {
+      const { root } = stickyVarBox.current.es;
+      if (!ref.current || !childRef.current || !root || !root.offsetParent) return;
+
       const {
         topOffset = 0,
         bottomOffset = 0,
         disableHardwareAcceleration,
         relative,
       } = stickyVarBox.current.props;
-      const { root } = stickyVarBox.current.es;
       let preventingStickyStateChanges = false;
 
-      let placeholderClientRect;
-      let contentClientRect;
-      let calculatedHeight = 0;
-      let btmd = 0;
+      const placeholderClientRect: DOMRect = ref.current.getBoundingClientRect();
+      const contentClientRect: DOMRect = childRef.current.getBoundingClientRect();
+      const calculatedHeight: number = contentClientRect.height;
+      let btmd: number = 0;
 
-      if (ref.current && childRef.current && root && root.offsetParent) {
-        placeholderClientRect = ref.current.getBoundingClientRect();
-        contentClientRect = childRef.current.getBoundingClientRect();
-        calculatedHeight = contentClientRect.height;
-        if (relative) {
-          preventingStickyStateChanges = eventSource !== root;
-          // eslint-disable-next-line no-param-reassign
-          distanceFromTop =
-            -(eventSource.scrollTop + eventSource.offsetTop) + ref.current.offsetTop;
-          btmd = root.offsetTop - root.offsetParent.scrollTop;
-        }
+      if (relative) {
+        preventingStickyStateChanges = eventSource !== root;
+        // eslint-disable-next-line no-param-reassign
+        distanceFromTop = -(eventSource.scrollTop + eventSource.offsetTop) + ref.current.offsetTop;
+        btmd = root.offsetTop - root.offsetParent.scrollTop;
       }
 
       const bottomDifference = distanceFromBottom - bottomOffset - calculatedHeight;

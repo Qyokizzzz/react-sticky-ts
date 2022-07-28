@@ -3,7 +3,15 @@ import raf from 'raf';
 import es from './EventServer';
 import { SubHandler } from './types';
 
-const events = ['resize', 'scroll', 'touchstart', 'touchmove', 'touchend', 'pageshow', 'load'];
+const events: string[] = [
+  'resize',
+  'scroll',
+  'touchstart',
+  'touchmove',
+  'touchend',
+  'pageshow',
+  'load',
+];
 
 function Container(props: { [key: string]: unknown }) {
   const ref = useRef<HTMLDivElement>(null);

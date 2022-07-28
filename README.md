@@ -8,22 +8,22 @@ react-sticky: <https://github.com/captivationsoftware/react-sticky>.
 
 ## Installation
 
-```command
+```Shell
 npm install react-sticky-ts
 ```
 
 ## Overview
 
-In react strict mode, the browser console will have a warning message because of the outdated life cycle is used in react-sticky.
+In react strict mode, the browser console will send a warning message because of the outdated life cycle is used in react-sticky.
 
-Today, we usually use functional components with react hooks to build applications, and we prefer to use strict mode and TypeScript. So I used popular technology to refactor the react-sticky.
+Today, we usually use functional components with react hooks to build applications, and we prefer to use strict mode and TypeScript. So I used the popular technology to refactor the react-sticky.
 
 ## examples
 
 Basic example with interfaces:
 
-```TypeScript
-import React from 'react';
+```jsx
+import React, { CSSProperties } from 'react';
 import { StickyContainer, Sticky } from 'react-sticky-ts';
 
 interface StickyProps {
@@ -61,7 +61,7 @@ function App() {
 
 Using react-sticky-ts in antd:
 
-```TypeScript
+```jsx
 import React from 'react';
 import { Tabs } from 'antd';
 import type { TabsProps } from 'antd';

@@ -1,0 +1,29 @@
+{
+  "name": "react-sticky-ts",
+  "private": true,
+  "version": "1.0.0",
+  "description": "The TypeScript version of react-sticky, using function components and hooks refactor.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qyokizzzz/react-sticky-ts.git"
+  },
+  "keywords": [
+    "react",
+    "react-sticky",
+    "react-sticky-ts"
+  ],
+  "author": "Qyokizzzz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Qyokizzzz/react-sticky-ts/issues"
+  },
+  "homepage": "https://github.com/Qyokizzzz/react-sticky-ts#readme",
+  "dependencies": {
+    "raf": "^3.4.1",
+    "react": "^18.2.0"
+  }
+}

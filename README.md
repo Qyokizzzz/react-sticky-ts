@@ -21,6 +21,7 @@ Today, we usually use functional components with react hooks to build applicatio
 ## Sticky Component interfaces
 
 ```TypeScript
+// Sticky's props
 interface StickyProps {
   topOffset?: number;
   bottomOffset?: number;
@@ -30,6 +31,7 @@ interface StickyProps {
   children: Function;
 }
 
+// Sticky's state, it's used for sticky's props.children.
 interface StickyState {
   isSticky: boolean;
   wasSticky: boolean;
@@ -42,7 +44,7 @@ interface StickyState {
 
 ## examples
 
-Basic example with interfaces:
+Basic example:
 
 ```jsx
 import React, { CSSProperties } from 'react';

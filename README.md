@@ -18,7 +18,7 @@ In react strict mode, the browser console will send a warning message because of
 
 Today, we usually use functional components with react hooks to build applications, and we prefer to use strict mode and TypeScript. So I used the popular technology to refactor the react-sticky.
 
-## Sticky Component interfaces
+## Sticky Component's interfaces
 
 ```TypeScript
 // Sticky's props

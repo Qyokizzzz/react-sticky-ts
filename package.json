@@ -1,11 +1,17 @@
 {
   "name": "react-sticky-ts",
-  "private": true,
+  "type": "module",
+  "files": ["dist"],
+  "private": false,
   "version": "1.0.0",
   "description": "The TypeScript version of react-sticky, using function components and hooks refactor.",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
+  "main": "./dist/react-sticky-ts.umd.cjs",
+  "module": "./dist/react-sticky-ts.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/react-sticky-ts.es.js",
+      "require": "./dist/react-sticky-ts.umd.cjs"
+    }
   },
   "repository": {
     "type": "git",

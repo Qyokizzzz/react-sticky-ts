@@ -2,21 +2,21 @@
 
 The TypeScript version of react-sticky, using function components and hooks refactor.
 
-If the react version is required, react-sticky-ts is compatible with react-sticky and it can be imported directly without code changes.
+If the React version is required, react-sticky-ts is compatible with react-sticky and it can be imported directly without code changes.
 
 react-sticky: <https://github.com/captivationsoftware/react-sticky>.
+
+## Purpose
+
+In React strict mode, the browser console will sends a warning message because of the outdated life cycle is used in react-sticky.
+
+For today's React users, we usually use functional components and hooks to build applications, and using TypeScript and strict mode in our project.
 
 ## Installation
 
 ```Shell
 npm install react-sticky-ts
 ```
-
-## Overview
-
-In react strict mode, the browser console will send a warning message because of the outdated life cycle is used in react-sticky.
-
-Today, we usually use functional components with react hooks to build applications, and we prefer to use strict mode and TypeScript. So I used the popular technology to refactor the react-sticky.
 
 ## Sticky Component's interfaces
 

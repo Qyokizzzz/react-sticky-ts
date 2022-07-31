@@ -1,16 +1,16 @@
 # react-sticky-ts
 
-The TypeScript version of react-sticky, using function components and hooks refactor.
+The TypeScript version of react-sticky, using functional component and hooks refactor.
 
-If the React version is required, react-sticky-ts is compatible with react-sticky and it can be imported directly without code changes.
+If your React version is required, react-sticky-ts is compatible with react-sticky and it can be imported directly without code changes.
 
 react-sticky: <https://github.com/captivationsoftware/react-sticky>.
 
 ## Purpose
 
-In React strict mode, the browser console will sends a warning message because of the outdated life cycle is used in react-sticky.
+In React.StrictMode, the browser console will sends a warning message because of the outdated life cycle is used in react-sticky.
 
-For today's React users, we usually use functional components and hooks to build applications, and using TypeScript and strict mode in our project.
+For today's React users, we usually use functional component and hooks to build applications, and using TypeScript and strict mode in our project.
 
 ## Installation
 
@@ -93,7 +93,7 @@ const stickyTabBarStyle = {
 const renderTabBar: TabsProps['renderTabBar'] = (props, DefaultTabBar) => (
   <Sticky bottomOffset={80}>
     {({ style }: TabsProps) => (
-      <DefaultTabBar {...props} style={{ ...stickyTabBarStyle, ...style }} />
+      <DefaultTabBar {...props} style={{ ...stickyTabBarStyle, ...style }} key="1" />
     )}
   </Sticky>
 );

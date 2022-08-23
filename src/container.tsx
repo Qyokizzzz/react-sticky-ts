@@ -15,36 +15,36 @@ const events: string[] = [
 
 function Container(props: { [key: string]: unknown }) {
   const ref = useRef<HTMLDivElement>(null);
-  const ContainerVarBox = useRef({
+  const containerVarBox = useRef({
     framePending: false,
     rafHandle: null,
     es,
   });
 
   const notifySubscribers = useCallback((evt: UIEvent | Event): void => {
-    if (!ContainerVarBox.current.framePending) {
+    if (!containerVarBox.current.framePending) {
       const { currentTarget } = evt;
-      ContainerVarBox.current.rafHandle = raf(() => {
-        ContainerVarBox.current.framePending = false;
+      containerVarBox.current.rafHandle = raf(() => {
+        containerVarBox.current.framePending = false;
         const node = ref.current;
         if (node) {
           const { top, bottom } = node.getBoundingClientRect();
-          ContainerVarBox.current.es.subscribers.forEach((handler: SubHandler) =>
+          containerVarBox.current.es.subscribers.forEach((handler: SubHandler) =>
             handler(top, bottom, currentTarget === window ? document.body : node)
           );
         }
       });
-      ContainerVarBox.current.framePending = true;
+      containerVarBox.current.framePending = true;
     }
   }, []);
 
   useEffect(() => {
-    ContainerVarBox.current.es.setRoot(ref.current);
+    containerVarBox.current.es.setRoot(ref.current);
   }, []);
 
   useEffect(() => {
     events.forEach((event: string) => window.addEventListener(event, notifySubscribers));
-    const { rafHandle } = ContainerVarBox.current;
+    const { rafHandle } = containerVarBox.current;
     return () => {
       if (rafHandle) {
         raf.cancel(rafHandle);

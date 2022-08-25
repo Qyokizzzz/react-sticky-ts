@@ -13,7 +13,7 @@ const events: string[] = [
   'load',
 ];
 
-function Container(props: { [key: string]: unknown }) {
+function Container(props: { [key: string]: any }) {
   const ref = useRef<HTMLDivElement>(null);
   const containerVarBox = useRef({
     framePending: false,

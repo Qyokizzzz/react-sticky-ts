@@ -10,12 +10,12 @@ export interface StickyProps {
 }
 
 export interface StickyState {
-  isSticky: boolean;
-  wasSticky: boolean;
-  distanceFromTop: number;
-  distanceFromBottom: number;
-  calculatedHeight: number;
-  style: CSSProperties;
+  isSticky?: boolean;
+  wasSticky?: boolean;
+  distanceFromTop?: number;
+  distanceFromBottom?: number;
+  calculatedHeight?: number;
+  style?: CSSProperties;
 }
 
 export type SubHandler = (

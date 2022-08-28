@@ -4,7 +4,7 @@
   "types": "src/index.ts",
   "files": ["dist"],
   "private": false,
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "The TypeScript version of react-sticky, using function components and hooks refactor.",
   "main": "./dist/react-sticky-ts.umd.cjs",
   "module": "./dist/react-sticky-ts.es.js",

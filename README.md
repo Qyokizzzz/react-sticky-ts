@@ -1,16 +1,16 @@
 # react-sticky-ts
 
-The TypeScript version of react-sticky, using functional component and hooks refactor.
+TypeScript version of react-sticky refactored with functional components and hooks.
 
 If your React version is required, react-sticky-ts is compatible with react-sticky and it can be imported directly without code changes.
 
-react-sticky: <https://github.com/captivationsoftware/react-sticky>.
+## Overview
 
-## Purpose
+In React.StrictMode, there will be a warning log in the browser console because of a outdated lifecycle is used in react-sticky.
 
-In React.StrictMode, the browser console will sends a warning message because of the outdated life cycle is used in react-sticky.
+For React users today, we usually build applications with functional components and hooks, and we usually use TypeScript and strict mode in our projects.
 
-For today's React users, we usually use functional component and hooks to build applications, and using TypeScript and strict mode in our project.
+So react-sticky-ts is the better choice.
 
 ## Installation
 
@@ -18,33 +18,9 @@ For today's React users, we usually use functional component and hooks to build 
 npm install react-sticky-ts
 ```
 
-## Sticky Component's interfaces
+## Examples
 
-```TypeScript
-// Sticky's props
-interface StickyProps {
-  topOffset?: number;
-  bottomOffset?: number;
-  relative?: boolean;
-  disableCompensation?: boolean;
-  disableHardwareAcceleration?: boolean;
-  children: Function;
-}
-
-// Sticky's state, it's used for sticky's props.children.
-interface StickyState {
-  isSticky: boolean;
-  wasSticky: boolean;
-  distanceFromTop: number;
-  distanceFromBottom: number;
-  calculatedHeight: number;
-  style: CSSProperties;
-}
-```
-
-## examples
-
-Basic example:
+### Basic example
 
 ```jsx
 import React, { CSSProperties } from 'react';
@@ -65,7 +41,7 @@ function App() {
 }
 ```
 
-Using react-sticky-ts in antd:
+### Using react-sticky-ts in antd
 
 ```jsx
 import React from 'react';
@@ -118,3 +94,7 @@ function App() {
 
 export default App;
 ```
+
+If the usage of react-sticky-ts makes you confusing, you can refer to the original documentation.
+
+react-sticky: <https://github.com/captivationsoftware/react-sticky>.

@@ -95,6 +95,6 @@ function App() {
 export default App;
 ```
 
-If the usage of react-sticky-ts makes you confusing, you can refer to the original documentation.
+If the usage of react-sticky-ts makes you confused, you can refer to the original documentation.
 
 react-sticky: <https://github.com/captivationsoftware/react-sticky>.

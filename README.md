@@ -1,16 +1,12 @@
 # react-sticky-ts
 
-React-sticky-ts is the TypeScript version of react-sticky, and it's refactored with functional components and hooks.
+React-sticky-ts is the TypeScript version of react-sticky.
 
 If the version of react supports hooks, react-sticky-ts is compatible with react-sticky and it can be imported directly without code changes.
 
 ## Overview
 
-In React.StrictMode, there will be a warning log in the browser console because of a outdated lifecycle is used in react-sticky.
-
-For react users today, we usually build applications with functional components and hooks, and usually use TypeScript and strict mode in our projects.
-
-The goal of react-sticky-ts is to resolve these questions.
+The goal of react-sticky-ts is to resolve the problem, a warning log in the browser console when React.StrictMode is turned on, the reason is react-sticky uses outdated lifecycles.
 
 ## Installation
 

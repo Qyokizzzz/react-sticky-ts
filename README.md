@@ -10,7 +10,7 @@ In React.StrictMode, there will be a warning log in the browser console because 
 
 For React users today, we usually build applications with functional components and hooks, and we usually use TypeScript and strict mode in our projects.
 
-The goal of react-sticky-ts is resolve these questions.
+The goal of react-sticky-ts is to resolve these questions.
 
 ## Installation
 

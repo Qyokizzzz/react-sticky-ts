@@ -2,7 +2,9 @@
 
 React-sticky-ts is a TypeScript version of react-sticky.
 
-If the version of react supports hooks, react-sticky-ts is compatible with react-sticky and it can be imported directly without code changes.
+If the version of react supports hooks, react-sticky-ts is available.
+
+React-sticky-ts is compatible with react-sticky and it can be imported directly without code changes.
 
 ## Overview
 

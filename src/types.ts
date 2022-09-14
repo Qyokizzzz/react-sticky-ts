@@ -23,12 +23,3 @@ export type SubHandler = (
   distanceFromBottom: number,
   eventSource: HTMLElement
 ) => void;
-
-export enum ActionType {
-  ASSIGN = 'assign',
-}
-
-export interface Action {
-  type: ActionType;
-  values: Object;
-}

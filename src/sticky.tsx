@@ -1,5 +1,5 @@
 import React, {
-  useReducer,
+  useState,
   useRef,
   useCallback,
   useEffect,
@@ -8,7 +8,7 @@ import React, {
   CSSProperties,
 } from 'react';
 import es from './EventServer';
-import { SubHandler, StickyProps, StickyState, ActionType, Action } from './types';
+import { SubHandler, StickyProps, StickyState } from './types';
 
 const initialState: StickyState = {
   isSticky: false,
@@ -19,19 +19,9 @@ const initialState: StickyState = {
   style: {},
 };
 
-function reducer(state: StickyState, action: Action) {
-  switch (action.type) {
-    case ActionType.ASSIGN:
-      return { ...state, ...action.values };
-    default:
-      return state;
-  }
-}
-
 function Sticky(props: StickyProps) {
   const { children, disableCompensation } = props;
-
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, setState] = useState(initialState);
   const ref = useRef<HTMLDivElement>(null);
   const childRef = useRef<Element>(null);
   const stickyVarBox = useRef({ es, props, state });
@@ -87,16 +77,13 @@ function Sticky(props: StickyProps) {
         style.transform = 'translateZ(0)';
       }
 
-      dispatch({
-        type: ActionType.ASSIGN,
-        values: {
-          isSticky,
-          wasSticky,
-          distanceFromTop,
-          distanceFromBottom,
-          calculatedHeight,
-          style,
-        },
+      setState({
+        isSticky,
+        wasSticky,
+        distanceFromTop,
+        distanceFromBottom,
+        calculatedHeight,
+        style,
       });
     },
     []
